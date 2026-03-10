@@ -43,12 +43,12 @@ It covers the full data engineering and analytics pipeline:
 data-warehouse-project/
 │
 ├── sql_scripts/
-│   ├── bronze_layer.sql          # Database setup + raw CSV loading
-│   ├── silver_layer.sql          # Data cleaning & transformation
-│   ├── gold_layer.sql            # Star schema (dimensions + fact table)
-│   ├── eda_analysis.sql          # Exploratory data analysis
-│   ├── customer_report.sql       # Customer KPI report view
-│   └── product_report.sql        # Product KPI report view
+│   ├── 01_bronze_layer.sql          # Database setup + raw CSV loading
+│   ├── 02_silver_layer.sql          # Data cleaning & transformation
+│   ├── 03_gold_layer.sql            # Star schema (dimensions + fact table)
+│   ├── 04_eda_analysis.sql          # Exploratory data analysis
+│   ├── 05_customer_report.sql       # Customer KPI report view
+│   └── 06_product_report.sql        # Product KPI report view
 │
 ├── datasets/
 │   ├── source_crm/
