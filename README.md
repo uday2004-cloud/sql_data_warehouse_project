@@ -43,19 +43,24 @@ It covers the full data engineering and analytics pipeline:
 data-warehouse-project/
 │
 ├── sql/
-│   └── Untitled.sql          # Full pipeline: Bronze → Silver → Gold → Analytics
+│   ├── 01_bronze_layer.sql          # Database setup + raw CSV loading
+│   ├── 02_silver_layer.sql          # Data cleaning & transformation
+│   ├── 03_gold_layer.sql            # Star schema (dimensions + fact table)
+│   ├── 04_eda_analysis.sql          # Exploratory data analysis
+│   ├── 05_customer_report.sql       # Customer KPI report view
+│   └── 06_product_report.sql        # Product KPI report view
 │
 ├── datasets/
 │   ├── source_crm/
-│   │   ├── cust_info.csv
-│   │   ├── prd_info.csv
-│   │   └── sales_details.csv
+│   │   ├── cust_info.csv            # Customer profiles
+│   │   ├── prd_info.csv             # Product catalog
+│   │   └── sales_details.csv        # Sales transactions
 │   └── source_erp/
-│       ├── CUST_AZ12.csv
-│       ├── LOC_A101.csv
-│       └── PX_CAT_G1V2.csv
+│       ├── CUST_AZ12.csv            # Customer demographics
+│       ├── LOC_A101.csv             # Customer locations
+│       └── PX_CAT_G1V2.csv          # Product categories
 │
-└── README.md
+└── README.md                        # Project documentation
 ```
 ## 🧱 Data Model — Star Schema
 
